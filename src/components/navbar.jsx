@@ -2,7 +2,7 @@ import { menuItems } from "../const/index";
 export const Navbar = () => {
   return (
     <header>
-      <nav className="flex items-center justify-between px-16 py-12">
+      <nav className="flex items-center justify-between px-16 pt-12">
         {/* Left */}
         <a href="/" className="text-xl font-bold">
           AGBO
