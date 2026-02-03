@@ -3,6 +3,8 @@ import { Navbar } from "./components/navbar";
 import { Exp } from "./components/exp";
 import Icons from "./components/icons";
 import { Projects } from "./components/projects";
+import { About } from "./components/about";
+import { Contact } from "./components/contact";
 
 const App = () => {
   return (
@@ -11,7 +13,9 @@ const App = () => {
       <Hero />
       <Exp />
       <Projects />
+      <About />
       <Icons />
+      <Contact />
     </>
   );
 };

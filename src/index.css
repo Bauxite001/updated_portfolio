@@ -75,3 +75,7 @@ body {
     transform: translateX(-100%);
   }
 }
+
+.contact-input {
+  @apply bg-transparent border border-gray-700 rounded-lg px-5 py-4 text-white outline-none focus:border-white transition;
+}
