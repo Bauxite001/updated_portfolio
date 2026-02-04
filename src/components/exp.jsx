@@ -2,7 +2,7 @@ import { counterItems } from "../const";
 
 export const Exp = () => {
   return (
-    <div className=" grid grid-cols-4 gap-18 mt-12 mb-2 px-12 ">
+    <div className=" grid md:grid-cols-2 xl:md:grid-cols-4 gap-6 md:gap-18 mt-12 mb-2 px-6 md:px-12 ">
       {counterItems.map((item) => (
         <div
           key={item.value}
@@ -11,7 +11,7 @@ export const Exp = () => {
           <p className="text-4xl font-bold">
             {item.value} <span>{item.suffix}</span>
           </p>
-          <p className="text-sm">{item.label}</p>
+          <p className="text-md">{item.label}</p>
         </div>
       ))}
     </div>

@@ -1,9 +1,9 @@
 // navBar Items
 const menuItems = [
-  { id: 1, label: "Home", href: "/" },
-  { id: 2, label: "About", href: "/about" },
-  { id: 3, label: "Services", href: "/services" },
-  { id: 4, label: "Contact", href: "/contact" },
+  { id: 1, label: "Project", href: "#project" },
+  { id: 2, label: "About", href: "#about" },
+  // { id: 3, label: "Services", href: "#services" },
+  // { id: 4, label: "Contact", href: "contact" },
 ];
 
 const words = [
