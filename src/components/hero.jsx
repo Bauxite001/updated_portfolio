@@ -30,7 +30,7 @@ export const Hero = () => {
           {/* Python, secure coding, and building projects that actually work. I
           turn concepts into real, reliable, and impactful solutions. */}
         </p>
-        <button className="bg-gray-800 px-8 py-4 w-full xl:w-70 rounded hover:bg-amber-50 hover:text-black duration-200 transition-all cursor-pointer my-4">
+        <button className="bg-gray-800 px-8 py-4 w-full xl:w-fit rounded hover:bg-amber-50 hover:text-black duration-200 transition-all cursor-pointer my-4">
           <p>SEE MY WORK</p>
         </button>
       </div>

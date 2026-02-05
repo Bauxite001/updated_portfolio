@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -8,31 +9,53 @@ export const Contact = () => {
   const validate = () => {
     const newErrors = {};
     if (!form.name.trim()) newErrors.name = "Name is required";
+
     if (!form.email.trim()) {
       newErrors.email = "Email is required";
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(form.email)) {
       newErrors.email = "Invalid email address";
     }
+
     if (!form.message.trim()) newErrors.message = "Message is required";
+
     return newErrors;
   };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); // Clear error on change
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validate();
+
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
       return;
     }
 
-    // Here you would send the form to your backend or email service
-    alert("Message sent successfully!");
-    setForm({ name: "", email: "", message: "" });
+    emailjs
+      .send(
+        "service_47vo00h",
+        "template_27gk4cb",
+        {
+          user_name: form.name,
+          user_email: form.email,
+          message: form.message,
+        },
+        "oKVyGX3W-LSV2sriK",
+      )
+      .then(
+        () => {
+          alert("Message sent successfully!");
+          setForm({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          alert("Failed to send message. Try again.");
+          console.log(error);
+        },
+      );
   };
 
   return (

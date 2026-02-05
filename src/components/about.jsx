@@ -1,6 +1,6 @@
 export const About = () => {
   return (
-    <section id="about" className="px-6 md:px-12 my-16 md:my-32">
+    <section id="about" className="px-6 md:px-12 my-8 md:my-12">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-12">
           About Me
