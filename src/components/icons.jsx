@@ -4,7 +4,7 @@ const Icons = () => {
   return (
     <section>
       <div className=" bg-gray-700 w-screen mt-12">
-        <div className="scroll-icons flex gap:8 md:gap-12 xl:gap-16 ">
+        <div className="scroll-icons flex gap-8 md:gap-12 xl:gap-16 ">
           {icons.map((icon, i) => (
             <img
               key={i}
