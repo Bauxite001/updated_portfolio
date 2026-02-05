@@ -25,17 +25,17 @@ const counterItems = [
 ];
 
 const icons = [
-  { imagePath: "../../public/devIcons/css.png" },
-  { imagePath: "../../public/devIcons/figma.png" },
-  { imagePath: "../../public/devIcons/git.png" },
-  { imagePath: "../../public/devIcons/github.png" },
-  { imagePath: "../../public/devIcons/html.png" },
-  { imagePath: "../../public/devIcons/python.png" },
-  { imagePath: "../../public/devIcons/javascript.png" },
-  { imagePath: "../../public/devIcons/node-js.png" },
-  { imagePath: "../../public/devIcons/react.png" },
-  { imagePath: "../../public/devIcons/typescript.png" },
-  { imagePath: "../../public/devIcons/visual-studio.png" },
+  { imagePath: "/devIcons/css.png" },
+  { imagePath: "/devIcons/figma.png" },
+  { imagePath: "/devIcons/git.png" },
+  { imagePath: "/devIcons/github.png" },
+  { imagePath: "/devIcons/html.png" },
+  { imagePath: "/devIcons/python.png" },
+  { imagePath: "/devIcons/javascript.png" },
+  { imagePath: "/devIcons/node-js.png" },
+  { imagePath: "/devIcons/react.png" },
+  { imagePath: "/devIcons/typescript.png" },
+  { imagePath: "/devIcons/visual-studio.png" },
 ];
 
 export { menuItems, words, counterItems, icons };
