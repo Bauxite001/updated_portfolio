@@ -1,7 +1,7 @@
 import { words } from "../const/index";
 export const Hero = () => {
   return (
-    <main className="flex flex-col xl:flex-row mt-10 xl:mt-20 px-6 xl:px-12 ">
+    <main className="flex flex-col xl:flex-row mt-16 xl:mt-20 px-6 xl:px-12 ">
       {/* Left Text */}
       <div className="w-full xl:w-3/5 xl:p-8 space-y-4">
         <h1 className="text-3xl md:text-6xl font-bold flex items-center">
