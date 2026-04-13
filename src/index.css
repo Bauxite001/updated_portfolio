@@ -64,15 +64,15 @@ body {
 }
 
 .scroll-icons {
-  animation: scrollIcons 20s linear infinite;
+  animation: scrollIcons 6s ease-in-out infinite alternate;
 }
 
 @keyframes scrollIcons {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-30%);
   }
 }
 

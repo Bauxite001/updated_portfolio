@@ -1,24 +1,17 @@
-import { Hero } from "./components/hero";
-import { Navbar } from "./components/navbar";
-import { Exp } from "./components/exp";
-import Icons from "./components/icons";
-import { Projects } from "./components/projects";
-import { About } from "./components/about";
-import { Contact } from "./components/contact";
-import { Footer } from "./components/footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./page/homepage";
+import ProjectsPage from "./page/ProjectsPage";
+import { ScrollToTop } from "./components/scrollToTop";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Exp />
-      <Projects />
-      <Icons />
-      <About />
-      <Contact />
-      <Footer />
-    </>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
