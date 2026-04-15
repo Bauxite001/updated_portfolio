@@ -87,7 +87,7 @@ export const Footer = () => {
                 {
                   icon: <FaInstagram />,
                   label: "Instagram",
-                  href: "https://instagram.com/yourusername",
+                  href: "https://instagram.com/bauzytech",
                 },
               ].map((social) => (
                 <a

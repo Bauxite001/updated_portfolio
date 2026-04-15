@@ -47,9 +47,15 @@ export const Navbar = () => {
           {/* Logo */}
           <a
             href="/"
-            className="text-xl font-black text-white tracking-tight hover:text-amber-400 transition-colors duration-200"
+            className="text-xl font-black text-white tracking-tight hover:text-amber-400 transition-colors duration-200 items-center
+            flex"
           >
-            AGBO<span className="text-amber-400">.</span>
+            <img
+              src="images/logo.jpg"
+              alt=""
+              className="w-8 h-8 rounded mr-1"
+            />
+            Bauzy<span className="text-amber-400">tech</span>
           </a>
 
           {/* Desktop center links */}
