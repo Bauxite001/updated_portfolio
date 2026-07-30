@@ -3,7 +3,136 @@ const menuItems = [
   { id: 1, label: "Projects", href: "#project" },
   { id: 2, label: "What I Do", href: "#whatido" },
   { id: 3, label: "About", href: "#about" },
-  // { id: 4, label: "Contact", href: "#contact" },
+  { id: 4, label: "Pricing", href: "/pricing" },
+  // { id: 5, label: "Contact", href: "#contact" },
+];
+
+// Site-wide info used for SEO/schema and the virtual assistant — keep in sync with the rest of this file
+const siteInfo = {
+  name: "Bauzytech",
+  brand: "Bauzytech",
+  role: "Senior Full-Stack Web & App Development Studio",
+  location: "Abuja, Nigeria",
+  email: "bauzytech@gmail.com",
+  whatsapp: "2349073203200", // international format, no + or spaces
+  whatsappDisplay: "+234 907 320 3200",
+  githubUrl: "https://github.com/yourusername", // TODO: replace with real GitHub profile URL
+  linkedinUrl: "https://linkedin.com/in/yourusername", // TODO: replace with real LinkedIn URL
+  twitterUrl: "https://twitter.com/yourusername", // TODO: replace with real X/Twitter URL
+  siteUrl: "https://bauzytech.com", // TODO: replace with your real live domain
+};
+
+// Notes shown on the pricing page — edit freely
+const pricingNotes = [
+  "Hosting and domain registration are not included in these prices — I can set them up for you at cost, or you're welcome to provide your own.",
+  "Prices above are for web apps. Need a mobile app too? Combined web + mobile packages are available at a higher price — message me for a custom quote.",
+];
+
+const pricingPlans = [
+  {
+    id: 1,
+    name: "Starter",
+    price: "₦150,000",
+    period: "/ project",
+    tagline: "Landing pages & small static sites",
+    platform: "Web App",
+    features: [
+      "Single-page or few-page site",
+      "Built with the most suitable modern stack for the project",
+      "Responsive, mobile-first design",
+      "Basic on-page SEO setup",
+      "Contact form integration",
+      "1 round of revisions",
+      "Delivery in 5–7 days",
+    ],
+    highlighted: false,
+  },
+  {
+    id: 2,
+    name: "Growth",
+    price: "₦450,000",
+    period: "/ project",
+    tagline: "Full business or portfolio websites",
+    platform: "Web App",
+    features: [
+      "Multi-page web app",
+      "Built with the most suitable modern stack for the project",
+      "Custom UI design & animations",
+      "CMS or admin dashboard",
+      "SEO + Open Graph + schema markup",
+      "Basic analytics setup",
+      "2 rounds of revisions",
+      "Delivery in 1–3 weeks",
+    ],
+    highlighted: true,
+  },
+  {
+    id: 3,
+    name: "Full-Stack / Custom",
+    price: "Custom Quote",
+    period: "",
+    tagline: "Web apps, mobile apps, marketplaces, and platforms",
+    platform: "Web App and/or Mobile App",
+    features: [
+      "Full-stack app — frontend, backend, database",
+      "Web app, mobile app, or both (pricing scales with scope)",
+      "Auth, payments, and third-party integrations",
+      "Admin dashboards and role-based access",
+      "Security-aware development (OWASP)",
+      "Ongoing maintenance available",
+      "Scoped timeline based on requirements",
+    ],
+    highlighted: false,
+  },
+];
+
+// Simple FAQ used to seed the on-site virtual assistant
+const faqItems = [
+  {
+    keywords: ["service", "do you do", "offer", "what can you", "capabilities"],
+    answer:
+      "Bauzytech builds full-stack web apps, mobile apps, backend/software tools, and also does QA testing, security-aware development, and AI data/evaluation work. See the \"What I Do\" section for details.",
+  },
+  {
+    keywords: ["mobile", "app", "ios", "android"],
+    answer:
+      "Yes — Bauzytech builds mobile apps as well as web apps. Combined web + mobile projects are priced higher than web-only — check the Pricing page or ask for a custom quote.",
+  },
+  {
+    keywords: ["hosting", "domain"],
+    answer:
+      "Hosting and domain registration aren't included in the listed prices, but Bauzytech can set them up for you at cost, or you can provide your own.",
+  },
+  {
+    keywords: ["price", "pricing", "cost", "rate", "charge", "how much"],
+    answer:
+      "Pricing depends on scope — check the Pricing page for starting ranges, or message Bauzytech on WhatsApp for a custom quote.",
+  },
+  {
+    keywords: ["contact", "reach", "email", "hire", "get in touch"],
+    answer:
+      "You can reach Bauzytech by email at bauzytech@gmail.com or WhatsApp at +234 907 320 3200 — usually a response within 24 hours.",
+  },
+  {
+    keywords: ["stack", "technology", "tech", "tools", "language", "framework"],
+    answer:
+      "Bauzytech builds with the most suitable modern stack for each project — chosen based on what the project actually needs, not a one-size-fits-all toolkit.",
+  },
+  {
+    keywords: ["project", "portfolio", "work", "built", "example"],
+    answer:
+      "Check the Projects section — highlights include an NGO donation platform, a weather PWA, and a service marketplace.",
+  },
+  {
+    keywords: ["where", "based", "location", "country", "remote"],
+    answer:
+      "Bauzytech is based in Abuja, Nigeria, and available for remote work worldwide.",
+  },
+  {
+    keywords: ["who are you", "about you", "who is", "founder"],
+    answer:
+      "Bauzytech is a full-stack web & app development studio building web products, mobile apps, and taking on client projects end to end.",
+  },
 ];
 
 const words = [
@@ -247,4 +376,15 @@ const projectCategories = [
   "Security",
 ];
 
-export { menuItems, words, whatIDoItems, icons, projects, projectCategories };
+export {
+  menuItems,
+  words,
+  whatIDoItems,
+  icons,
+  projects,
+  projectCategories,
+  siteInfo,
+  pricingPlans,
+  pricingNotes,
+  faqItems,
+};

@@ -43,13 +43,11 @@ export const About = () => {
             className="bg-black p-10 xl:p-14 space-y-6"
           >
             <p className="text-gray-400 text-lg leading-relaxed">
-              I'm <span className="text-white font-black">Moses Agbo</span>, a
-              self-taught full-stack developer based in{" "}
-              <span className="text-white font-black">Abuja, Nigeria</span>, and
-              the founder of{" "}
-              <span className="text-amber-400 font-black">Bauzytech</span> —
-              where I build web products and take on client projects
-              independently.
+              I'm <span className="text-amber-400 font-black">Bauzytech</span>
+              , a self-taught full-stack developer based in{" "}
+              <span className="text-white font-black">Abuja, Nigeria</span> —
+              building web products, mobile apps, and taking on client
+              projects independently.
             </p>
 
             <p className="text-gray-400 text-lg leading-relaxed">

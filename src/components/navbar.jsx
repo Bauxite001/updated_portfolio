@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { menuItems } from "../const/index";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export const Navbar = () => {
   const location = useLocation();
@@ -62,13 +62,22 @@ export const Navbar = () => {
           <ul className="hidden md:flex gap-10 text-xs font-bold tracking-widest uppercase text-gray-400">
             {menuItems.map((item) => (
               <li key={item.id} className="relative group">
-                <a
-                  href={item.href}
-                  onClick={(e) => handleNavClick(e, item.href)}
-                  className="hover:text-amber-400 transition-colors duration-200"
-                >
-                  {item.label}
-                </a>
+                {item.href.startsWith("#") ? (
+                  <a
+                    href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
+                    className="hover:text-amber-400 transition-colors duration-200"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="hover:text-amber-400 transition-colors duration-200"
+                  >
+                    {item.label}
+                  </Link>
+                )}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-amber-400 transition-all duration-300 group-hover:w-full" />
               </li>
             ))}
@@ -117,19 +126,36 @@ export const Navbar = () => {
             transition={{ duration: 0.25, ease: "easeOut" }}
             className="fixed inset-0 z-40 bg-black flex flex-col justify-center items-center gap-8 md:hidden"
           >
-            {menuItems.map((item, i) => (
-              <motion.a
-                key={item.id}
-                href={item.href}
-                onClick={(e) => handleNavClick(e, item.href)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="text-4xl font-black text-white hover:text-amber-400 transition-colors duration-200 tracking-tight"
-              >
-                {item.label}
-              </motion.a>
-            ))}
+            {menuItems.map((item, i) =>
+              item.href.startsWith("#") ? (
+                <motion.a
+                  key={item.id}
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  className="text-4xl font-black text-white hover:text-amber-400 transition-colors duration-200 tracking-tight"
+                >
+                  {item.label}
+                </motion.a>
+              ) : (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                >
+                  <Link
+                    to={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-4xl font-black text-white hover:text-amber-400 transition-colors duration-200 tracking-tight"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
+              ),
+            )}
 
             <motion.a
               href="#contact"

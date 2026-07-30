@@ -202,12 +202,11 @@ export const Hero = () => {
             variants={fadeUp}
             className="text-gray-400 text-lg md:text-xl leading-relaxed max-w-xl"
           >
-            I'm <span className="text-white font-semibold">Moses Agbo</span>,
-            founder of{" "}
-            <span className="text-amber-400 font-semibold">Bauzytech</span> — a
-            full-stack developer building performant web apps, data-driven
-            tools, and security-aware systems. From frontend to backend, QA to
-            AI data work, I cover the full product lifecycle.
+            I'm <span className="text-amber-400 font-semibold">Bauzytech</span>
+            — a full-stack developer building performant web apps, mobile
+            apps, data-driven tools, and security-aware systems. From
+            frontend to backend, QA to AI data work, I cover the full
+            product lifecycle.
           </motion.p>
 
           {/* CTAs */}

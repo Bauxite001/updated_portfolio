@@ -1,0 +1,30 @@
+# Bauzytech — robots.txt
+# Default: allow all crawlers full access
+
+User-agent: *
+Allow: /
+
+# Common AI/LLM crawlers — explicitly allowed so this site can be cited
+# in AI answers and assistants (ChatGPT, Claude, Perplexity, Google AI, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://bauzytech.com/sitemap.xml

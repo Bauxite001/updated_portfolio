@@ -117,7 +117,7 @@ export const Footer = () => {
             © {new Date().getFullYear()} Bauzytech. All rights reserved.
           </p>
           <p className="text-gray-700 text-xs tracking-widest uppercase">
-            Designed & Built by Moses Agbo
+            Designed & Built by Bauzytech
           </p>
         </motion.div>
       </div>
