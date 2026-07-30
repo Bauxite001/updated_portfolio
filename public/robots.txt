@@ -27,4 +27,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://bauzytech.com/sitemap.xml
+Sitemap: https://bauzytech.pro/sitemap.xml

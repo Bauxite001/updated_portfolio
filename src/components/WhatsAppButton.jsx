@@ -25,7 +25,7 @@ export const WhatsAppButton = () => {
       <FaWhatsapp className="relative text-black text-3xl" />
 
       {/* Tooltip on hover — desktop only */}
-      <span className="hidden md:block absolute right-16 whitespace-nowrap bg-gray-900 border border-gray-700 text-white text-xs font-semibold px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
+      <span className="hidden md:block absolute right-16 top-1/2 -translate-y-1/2 whitespace-nowrap bg-gray-900 border border-gray-700 text-white text-xs font-semibold px-3 py-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
         Chat on WhatsApp
       </span>
     </motion.a>

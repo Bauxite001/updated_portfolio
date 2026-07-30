@@ -45,8 +45,8 @@ export const Navbar = () => {
       >
         <nav className="flex items-center justify-between px-6 xl:px-16 py-4">
           {/* Logo */}
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-xl font-black text-white tracking-tight hover:text-amber-400 transition-colors duration-200 items-center
             flex"
           >
@@ -56,7 +56,7 @@ export const Navbar = () => {
               className="w-8 h-8 rounded mr-1"
             />
             Bauzy<span className="text-amber-400">tech</span>
-          </a>
+          </Link>
 
           {/* Desktop center links */}
           <ul className="hidden md:flex gap-10 text-xs font-bold tracking-widest uppercase text-gray-400">
@@ -84,13 +84,12 @@ export const Navbar = () => {
           </ul>
 
           {/* Desktop right CTA */}
-          <a
-            href="#contact"
-            onClick={(e) => handleNavClick(e, "#contact")}
+          <Link
+            to="/contact"
             className="hidden md:block text-xs font-black tracking-widest uppercase text-amber-400 border border-amber-400 px-5 py-2 hover:bg-amber-400 hover:text-black transition-all duration-200"
           >
             Contact Me
-          </a>
+          </Link>
 
           {/* Mobile hamburger */}
           <button
@@ -157,16 +156,19 @@ export const Navbar = () => {
               ),
             )}
 
-            <motion.a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, "#contact")}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: menuItems.length * 0.08 }}
-              className="text-4xl font-black text-amber-400 hover:text-amber-300 transition-colors duration-200 tracking-tight"
             >
-              Contact Me
-            </motion.a>
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="text-4xl font-black text-amber-400 hover:text-amber-300 transition-colors duration-200 tracking-tight"
+              >
+                Contact Me
+              </Link>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,10 +1,10 @@
 // navBar Items
 const menuItems = [
-  { id: 1, label: "Projects", href: "#project" },
-  { id: 2, label: "What I Do", href: "#whatido" },
-  { id: 3, label: "About", href: "#about" },
+  { id: 1, label: "About", href: "/about" },
+  { id: 2, label: "Services", href: "/services" },
+  { id: 3, label: "Portfolio", href: "/portfolio" },
   { id: 4, label: "Pricing", href: "/pricing" },
-  // { id: 5, label: "Contact", href: "#contact" },
+  { id: 5, label: "Contact", href: "/contact" },
 ];
 
 // Site-wide info used for SEO/schema and the virtual assistant — keep in sync with the rest of this file
@@ -16,10 +16,11 @@ const siteInfo = {
   email: "bauzytech@gmail.com",
   whatsapp: "2349073203200", // international format, no + or spaces
   whatsappDisplay: "+234 907 320 3200",
-  githubUrl: "https://github.com/yourusername", // TODO: replace with real GitHub profile URL
-  linkedinUrl: "https://linkedin.com/in/yourusername", // TODO: replace with real LinkedIn URL
-  twitterUrl: "https://twitter.com/yourusername", // TODO: replace with real X/Twitter URL
-  siteUrl: "https://bauzytech.com", // TODO: replace with your real live domain
+  githubUrl: "https://github.com/Bauxite001",
+  linkedinUrl: "https://linkedin.com/in/bauzytech",
+  twitterUrl: "https://twitter.com/bauxite004",
+  siteUrl: "https://bauzytech.pro",
+  instagramUrl: "https://instagram.com/bauzytech",
 };
 
 // Notes shown on the pricing page — edit freely
@@ -91,7 +92,7 @@ const faqItems = [
   {
     keywords: ["service", "do you do", "offer", "what can you", "capabilities"],
     answer:
-      "Bauzytech builds full-stack web apps, mobile apps, backend/software tools, and also does QA testing, security-aware development, and AI data/evaluation work. See the \"What I Do\" section for details.",
+      'Bauzytech builds full-stack web apps, mobile apps, backend/software tools, and also does QA testing, security-aware development, and AI data/evaluation work. See the "What I Do" section for details.',
   },
   {
     keywords: ["mobile", "app", "ios", "android"],
@@ -121,7 +122,12 @@ const faqItems = [
   {
     keywords: ["project", "portfolio", "work", "built", "example"],
     answer:
-      "Check the Projects section — highlights include an NGO donation platform, a weather PWA, and a service marketplace.",
+      "Check the Portfolio section for highlights — an NGO donation platform, a weather PWA, and a service marketplace. For the full list of everything Bauzytech has built, check the GitHub profile linked in the footer.",
+  },
+  {
+    keywords: ["github", "code", "repo", "open source"],
+    answer:
+      "You can see the code behind Bauzytech's projects on GitHub — the link is in the footer of every page.",
   },
   {
     keywords: ["where", "based", "location", "country", "remote"],

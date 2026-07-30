@@ -13,9 +13,12 @@ Bauzytech is a full-stack development studio covering the full product lifecycle
 - AI training & data: model evaluation, data labeling, SQL-based data analysis
 
 ## Pages
-- [Homepage](https://bauzytech.com/): Overview, capabilities, featured projects, about, and contact form
-- [Projects](https://bauzytech.com/projects): Full project list with filtering by category
-- [Pricing](https://bauzytech.com/pricing): Starting price ranges for web app projects (mobile and combined web+mobile projects are quoted separately, generally at a higher price; hosting and domain registration are not included by default)
+- [Homepage](https://bauzytech.pro/): Landing page with overview, capabilities teaser, and featured projects
+- [About](https://bauzytech.pro/about): Full background on Bauzytech
+- [Services](https://bauzytech.pro/services): Full list of services offered
+- [Portfolio](https://bauzytech.pro/portfolio): Full project list with filtering by category
+- [Pricing](https://bauzytech.pro/pricing): Starting price ranges for web app projects (mobile and combined web+mobile projects are quoted separately, generally at a higher price; hosting and domain registration are not included by default)
+- [Contact](https://bauzytech.pro/contact): Contact form and direct contact details
 
 ## Contact
 - Email: bauzytech@gmail.com

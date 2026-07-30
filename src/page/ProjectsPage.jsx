@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { projects, projectCategories } from "../const/index";
+import { FaGithub } from "react-icons/fa";
+import { projects, projectCategories, siteInfo } from "../const/index";
 import { ProjectCard, ProjectModal } from "../components/projects";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
+import { useDocumentMeta } from "../hooks/useDocumentMeta";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -20,6 +22,11 @@ const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
   const navigate = useNavigate();
+
+  useDocumentMeta(
+    "Portfolio — Bauzytech | Web & Mobile App Projects",
+    "Browse Bauzytech's portfolio of full-stack web apps, mobile apps, and software projects — including an NGO donation platform, a weather PWA, and a service marketplace.",
+  );
 
   const filtered =
     activeFilter === "All"
@@ -53,15 +60,31 @@ const ProjectsPage = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="mb-16"
+            className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6"
           >
-            <p className="text-amber-400 text-xs font-bold tracking-[0.3em] uppercase mb-3">
-              Portfolio
-            </p>
-            <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
-              All Projects
-            </h1>
-            <div className="w-16 h-1 bg-amber-400 mt-4" />
+            <div>
+              <p className="text-amber-400 text-xs font-bold tracking-[0.3em] uppercase mb-3">
+                Selected Work
+              </p>
+              <h1 className="text-4xl md:text-6xl font-black text-white leading-tight">
+                Portfolio
+              </h1>
+              <div className="w-16 h-1 bg-amber-400 mt-4" />
+              <p className="text-gray-500 text-sm mt-4 max-w-md">
+                A curated selection below. For the full history of everything
+                built, browse the GitHub profile.
+              </p>
+            </div>
+
+            <a
+              href={siteInfo.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-gray-700 text-white px-6 py-3 font-black tracking-widest uppercase text-xs hover:border-amber-400 hover:text-amber-400 transition-all duration-300 self-start"
+            >
+              <FaGithub size={16} />
+              View GitHub
+            </a>
           </motion.div>
 
           {/* Filter Bar */}

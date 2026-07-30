@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
@@ -40,18 +41,19 @@ export const Footer = () => {
             </p>
             <div className="flex flex-col gap-3">
               {[
-                { label: "Projects", href: "#project" },
-                { label: "What I Do", href: "#whatido" },
-                { label: "About", href: "#about" },
-                { label: "Contact", href: "#contact" },
+                { label: "About", href: "/about" },
+                { label: "Services", href: "/services" },
+                { label: "Portfolio", href: "/portfolio" },
+                { label: "Pricing", href: "/pricing" },
+                { label: "Contact", href: "/contact" },
               ].map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   className="text-gray-500 text-sm hover:text-amber-400 transition-colors duration-200 w-fit"
                 >
                   {link.label} →
-                </a>
+                </Link>
               ))}
             </div>
           </motion.div>
@@ -72,17 +74,17 @@ export const Footer = () => {
                 {
                   icon: <FaGithub />,
                   label: "GitHub",
-                  href: "https://github.com/yourusername",
+                  href: "https://github.com/Bauxite001",
                 },
                 {
                   icon: <FaLinkedin />,
                   label: "LinkedIn",
-                  href: "https://linkedin.com/in/yourusername",
+                  href: "https://www.linkedin.com/in/bauzy-tech-0a27673b3?",
                 },
                 {
                   icon: <FaTwitter />,
                   label: "Twitter",
-                  href: "https://twitter.com/yourusername",
+                  href: "https://twitter.com/bauxite004",
                 },
                 {
                   icon: <FaInstagram />,

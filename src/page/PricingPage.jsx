@@ -4,6 +4,7 @@ import { Check } from "lucide-react";
 import { pricingPlans, pricingNotes, siteInfo } from "../const/index";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
+import { useDocumentMeta } from "../hooks/useDocumentMeta";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -17,6 +18,11 @@ const stagger = {
 
 const PricingPage = () => {
   const navigate = useNavigate();
+
+  useDocumentMeta(
+    "Pricing — Bauzytech | Web & Mobile App Development Rates",
+    "Starting price ranges for Bauzytech web app projects, from landing pages to full-stack platforms. Mobile app and combined web+mobile pricing available on request.",
+  );
   const whatsappHref = `https://wa.me/${siteInfo.whatsapp}?text=${encodeURIComponent(
     "Hi Bauzytech, I'd like a custom quote for a project.",
   )}`;
