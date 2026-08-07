@@ -13,7 +13,7 @@ const siteInfo = {
   brand: "Bauzytech",
   role: "Senior Full-Stack Web & App Development Studio",
   location: "Abuja, Nigeria",
-  email: "bauzytech@gmail.com",
+  email: "mail@bauzytech.pro",
   whatsapp: "2349073203200", // international format, no + or spaces
   whatsappDisplay: "+234 907 320 3200",
   githubUrl: "https://github.com/Bauxite001",
