@@ -111,7 +111,7 @@ export const Contact = () => {
             {/* Info items */}
             <div className="space-y-6">
               {[
-                { label: "Email", value: "bauzytech@gmail.com" },
+                { label: "Email", value: "info@bauzytech.pro" },
                 {
                   label: "Availability",
                   value: "Open to remote opportunities",
@@ -157,7 +157,7 @@ export const Contact = () => {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="bauzy mike"
                   className={`bg-gray-950 text-white border px-5 py-4 outline-none text-sm transition-all duration-200 ${
                     errors.name
                       ? "border-red-500"
@@ -179,7 +179,7 @@ export const Contact = () => {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  placeholder="johndoe@email.com"
+                  placeholder="bauzytech@gmail.com"
                   className={`bg-gray-950 text-white border px-5 py-4 outline-none text-sm transition-all duration-200 ${
                     errors.email
                       ? "border-red-500"
